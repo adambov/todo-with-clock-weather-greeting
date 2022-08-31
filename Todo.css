@@ -71,8 +71,10 @@
     }
     
     .singleTodo {
-        width: 25vw;
+        width: 35vw;
         height: 5vh;
+        min-height: fit-content;
+        min-width: fit-content;
         background-color: lightcyan;
         margin-top: 1vh;
         list-style: none;

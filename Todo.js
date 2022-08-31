@@ -9,7 +9,7 @@ let greet = document.querySelector('.greet');
 let nameField = document.querySelector('.name');
 
 let count = 0;
-// let weatherApi = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lat}${long}?unitGroup=metric&include=current&key=8KMD372YW2Q8GMA8MVMBV36BS&contentType=json`;
+
 let url = 'http://localhost:3000/todos';
 
 window.addEventListener('load', () => {
@@ -21,6 +21,7 @@ if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(position => {
         long = position.coords.longitude;
         lat = position.coords.latitude;
+        // console.log(long, long)
 
     fetch(weatherApi)
         .then(response => {
@@ -35,7 +36,7 @@ if(navigator.geolocation){
             weatherDescr.textContent = conditions;
         });
 })
-}  
+}
 });
 
 addBtn.addEventListener('click', addTodo);
@@ -51,18 +52,23 @@ function deleteCheck(e) {
     const item = e.target.parentElement;
     const singleTodo = item.parentElement;
     const todoId = singleTodo.getAttribute('id');
-    const checkClickCount = 0;
+    let checkClickCount = 0;
     // console.log(singleTodo);
     // console.log(todoId);
-
+    checkClickCount++;
 
     if (item.classList[0] === 'checkBtn') {
-        singleTodo.classList.toggle('completed');
-        editTodoOnServerTrue(`${url}/${todoId}`);
-        checkClickCount++;
-        if ( checkClickCount % 2 === 0 ) {
-            editTodoOnServerFalse(`${url}/${todoId}`);
+        let checked = singleTodo.classList.toggle('completed');
+        console.log(checked);
+
+        if (checked === true) {
+            editTodoOnServerTrue(`${url}/${todoId}`);
+
+        } else {
+
+            editTodoOnServerFalse(`${url}/${todoId}`); 
         }
+        
     }
 
     if (item.classList[0] === 'delBtn') {
@@ -198,9 +204,6 @@ function addTodo() {
 
 }
 
-
 getTodosOnLoad(url);
-getWeather(weatherApi);
 displayTime();
 greeting();
-///someting
