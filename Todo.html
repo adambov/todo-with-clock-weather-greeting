@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/809ad193ad.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./Todo.css">
+    <title>Todo</title>
+</head>
+<body>
+    <div id="tempAndTime" class="tempAndTime">
+        <time class="time" id="time">16:08:23</time> 
+        <div id="temperature" class="temperature"></div>
+        <div class="weatherDescr" id="weatherDescr"></div>
+    </div>
+    
+    <h1> <span class="greet" id="greet">Good Day</span> <span class="name" id="name"> Atanas</span></h1>
+    <h2>What are you up to?</h2>
+    <div class="form">
+        <input type="text" class="input" id="input" placeholder="enter a todo">
+        <button type="submit" class="submit" id="submit">+Add</button>
+    </div>
+
+    <div class="totalTodos"><output class="countOfTotalTodos" id ="countOfTotalTodos">Total Todos: 0</output></div>
+
+    <div class="todo-container">
+        <ul class="todo-list"></ul>
+    </div>
+    <script src="./Todo.js"></script>
+</body>
+</html>

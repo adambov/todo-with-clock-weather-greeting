@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #01FF70;
+        font-family: 'Mukta', sans-serif;
+    }
+    
+    h1 {
+        margin-top: 2vh;
+        color: #DDDDDD;
+        font-size: 8vh;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color:black;
+    }
+    
+    .form {
+        margin-top: 3vh;
+    }
+    
+    .totalTodos {
+        margin-top: 3vh;
+    }
+    
+    input {
+        padding: 1vw;
+        width: 35vw;
+        height: 5vh;
+        background-color: lightcyan;
+        font-size: 17px;
+        border-style: none;
+        margin-top: 3vh;
+    }
+    
+    .submit {
+        height: 5vh;
+        width: 5vw;
+        min-width: fit-content;
+        color: black;
+        font-weight: 700;
+        font-size: 2vh;
+        background-color: lightcyan;
+        border: 1px solid black;
+    }
+    
+    .tempAndTime {
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+        align-items: baseline;
+        width: 100%;
+    }
+    
+    .time {
+        margin-left: 3vw;
+        margin-top: 4vh;
+        font-size: 4vh;
+    }
+    
+    .temperature {
+        margin-left: 75vw;
+        margin-top: 4vh;
+        font-size: 4vh;
+    }
+    
+    .singleTodo {
+        width: 25vw;
+        height: 5vh;
+        background-color: lightcyan;
+        margin-top: 1vh;
+        list-style: none;
+        padding-left: 1vw;
+        padding-top: .5vh;
+        padding-right: 1vw;
+    }
+    
+    .delBtn, .checkBtn {
+        width: 1.5vw;
+        min-width: fit-content;
+        height: 3.5vh;
+        min-height: fit-content;
+        position: relative;
+        float: right;
+        margin-top: .3vh;
+    }
+    
+    li {
+        min-width: fit-content;
+        min-height: fit-content;
+    }
+    
+    .completed{
+        text-decoration: line-through;
+        opacity: .5;
+    }
+    
